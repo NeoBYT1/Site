@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Guilda FF - Recrutamento</title>
+<style>
+body{margin:0;font-family:Arial;background:#0f3d2e;color:#fff}
+.hero{display:flex;justify-content:space-between;align-items:center;padding:60px}
+.hero img{width:320px;animation:slide 1.2s}
+@keyframes slide{from{opacity:0;transform:translateX(150px)}to{opacity:1;transform:none}}
+.form{background:#000a;padding:30px;border-radius:15px;max-width:400px}
+input,button{width:100%;padding:12px;margin-top:10px;border-radius:8px;border:none}
+button{background:#1aff00;font-weight:bold}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div>
+    <h1>Recrutamento Free Fire</h1>
+    <p>Guilda organizada e competitiva</p>
+    <div class="form">
+      <input id="nome" placeholder="Nome">
+      <input id="idff" placeholder="ID FF">
+      <input id="tel" placeholder="Telefone">
+      <button onclick="save()">Enviar</button>
+    </div>
+  </div>
+  <img src="https://cdn.discordapp.com/attachments/1460806486677651538/1461133150431219881/8557-removebg-preview.png">
+</div>
+<script>
+function save(){
+ let d=JSON.parse(localStorage.getItem('recrutados'))||[];
+ d.push({nome:nome.value,idff:idff.value,tel:tel.value,data:new Date().toLocaleString()});
+ localStorage.setItem('recrutados',JSON.stringify(d));
+ alert('Enviado');
+}
+</script>
+</body>
+</html>

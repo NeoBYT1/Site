@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Logs FF</title>
+<style>
+body{font-family:Arial;background:#000;color:#fff;padding:40px}
+table{width:100%;border-collapse:collapse}
+th,td{border:1px solid #1aff00;padding:10px;text-align:center}
+th{background:#1aff00;color:#003300}
+</style>
+</head>
+<body>
+<h1>Logs Recrutamento</h1>
+<table>
+<tr><th>Nome</th><th>ID FF</th><th>Telefone</th><th>Data</th></tr>
+<tbody id="t"></tbody>
+</table>
+<script>
+let d=JSON.parse(localStorage.getItem('recrutados'))||[];
+t.innerHTML=d.map(p=>`<tr><td>${p.nome}</td><td>${p.idff}</td><td>${p.tel}</td><td>${p.data}</td></tr>`).join('');
+</script>
+</body>
+</html>
