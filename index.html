@@ -1,262 +1,260 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Recrutamento Oficial - Guilda FF</title>
-
-<style>
-* { box-sizing: border-box; }
-
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: radial-gradient(circle at top, #0f3d2e, #000);
-    color: #fff;
-}
-
-/* HERO */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 60px 8%;
-    min-height: 100vh;
-}
-
-.hero-text {
-    max-width: 520px;
-}
-
-.hero-text h1 {
-    font-size: 48px;
-    line-height: 1.1;
-    color: #1aff00;
-}
-
-.hero-text span {
-    color: #ffe600;
-}
-
-.hero-text p {
-    margin: 20px 0;
-    font-size: 16px;
-    color: #ddd;
-}
-
-.hero-tags {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.hero-tags div {
-    background: #1aff00;
-    color: #003300;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 13px;
-}
-
-/* PERSONAGEM */
-.hero-img {
-    animation: aparecer 1.5s ease;
-}
-
-.hero-img img {
-    width: 380px;
-    filter: drop-shadow(0 0 40px #1aff00);
-}
-
-@keyframes aparecer {
-    from { transform: translateX(150px); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-}
-
-/* SECTIONS */
-section {
-    padding: 80px 8%;
-}
-
-.title {
-    font-size: 36px;
-    color: #1aff00;
-    margin-bottom: 20px;
-}
-
-.subtitle {
-    max-width: 700px;
-    color: #ccc;
-    font-size: 16px;
-}
-
-/* CARDS */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    margin-top: 40px;
-}
-
-.card {
-    background: linear-gradient(135deg, #0b2e13, #003300);
-    border-radius: 18px;
-    padding: 25px;
-    box-shadow: 0 0 25px rgba(26,255,0,0.4);
-}
-
-.card h3 {
-    color: #ffe600;
-    margin-bottom: 10px;
-}
-
-/* FORM */
-.form {
-    max-width: 500px;
-    margin: auto;
-    background: rgba(0,0,0,0.75);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 0 40px #1aff00;
-}
-
-input {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 14px;
-    border-radius: 10px;
-    border: none;
-    font-size: 15px;
-}
-
-button {
-    width: 100%;
-    padding: 15px;
-    border-radius: 10px;
-    border: none;
-    background: linear-gradient(90deg, #1aff00, #ffe600);
-    color: #003300;
-    font-size: 17px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover { transform: scale(1.05); }
-
-/* MOBILE */
-@media (max-width: 900px) {
-    .hero { flex-direction: column; text-align: center; }
-    .hero-img img { width: 280px; margin-top: 30px; }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRT GAMING - O Melhor do FF</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ff: {
+                            red: '#0099FF', // AZUL PRINCIPAL
+                            dark: '#050505',
+                            gray: '#101828',
+                            neon: '#00F5FF'
+                        }
+                    },
+                    fontFamily: {
+                        title: ['Bebas Neue', 'sans-serif'],
+                        body: ['Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 0 10px rgba(0, 153, 255, 0.8), 0 0 20px rgba(0, 153, 255, 0.5);
+            }
+            .border-glow {
+                box-shadow: 0 0 15px rgba(0, 245, 255, 0.5);
+            }
+            .bg-gradient-game {
+                background: linear-gradient(145deg, #050505 0%, #0A192F 100%);
+            }
+        }
+    </style>
+    <style>
+        body {
+            background-color: #050505;
+            overflow-x: hidden;
+        }
+        .hero-bg {
+            /* IMAGEM DO FUNDO */
+            background-image: url('https://cdn.discordapp.com/attachments/1363141435171537100/1498421920196984922/69563e_b2026e3fe3584ea1a27307c7f6794985mv2.png');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0099FF;
+            border-radius: 4px;
+        }
+    </style>
 </head>
+<body class="font-body text-white">
 
-<body>
-
-<!-- HERO -->
-<div class="hero">
-    <div class="hero-text">
-        <h1>Recrutamento<br><span>Oficial Free Fire</span></h1>
-        <p>
-            Estamos recrutando jogadores dedicados, focados e competitivos.
-            Se você quer crescer, evoluir e jogar com quem leva o jogo a sério,
-            essa é a sua chance.
-        </p>
-
-        <div class="hero-tags">
-            <div>Guilda Ativa</div>
-            <div>Competitiva</div>
-            <div>Organizada</div>
-            <div>Foco em Rank</div>
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-ff-red/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <h1 class="font-title text-4xl text-ff-red text-shadow tracking-wider">BRT GAMING</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="font-title text-xl hover:text-ff-red transition-colors duration-300">INÍCIO</a>
+                        <a href="#sobre" class="font-title text-xl hover:text-ff-red transition-colors duration-300">SOBRE</a>
+                        <a href="#torneios" class="font-title text-xl hover:text-ff-red transition-colors duration-300">TORNEIOS</a>
+                        <a href="#elenco" class="font-title text-xl hover:text-ff-red transition-colors duration-300">ELENCO</a>
+                        <a href="#contato" class="font-title text-xl hover:text-ff-red transition-colors duration-300">CONTATO</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </nav>
 
-    <div class="hero-img">
-        <img src="https://cdn.discordapp.com/attachments/1460806486677651538/1461133150431219881/8557-removebg-preview.png?ex=696971c9&is=69682049&hm=edd7c4be11c48cac3cd2523f4134b30b3c1a7ea1db0ef057e5402d05e1302977&">
-    </div>
-</div>
-
-<!-- SOBRE -->
-<section>
-    <h2 class="title">Quem Somos</h2>
-    <p class="subtitle">
-        Somos uma guilda estruturada, com visão de crescimento, focada em
-        ranqueadas, campeonatos e evolução dos membros.
-        Aqui não tem bagunça, não tem aleatório: só quem quer evoluir.
-    </p>
-</section>
-
-<!-- BENEFÍCIOS -->
-<section>
-    <h2 class="title">O que você ganha</h2>
-
-    <div class="cards">
-        <div class="card">
-            <h3>Treinos</h3>
-            <p>Treinos organizados para melhorar call, capa e posicionamento.</p>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-bg bg-ff-dark min-h-screen flex items-center justify-center relative pt-20">
+        <div class="absolute inset-0 bg-black/70"></div>
+        <div class="relative z-10 text-center px-4">
+            <h2 class="font-title text-[clamp(3rem,15vw,8rem)] text-white leading-none mb-4">
+                <span class="text-ff-red text-shadow">BRT</span> GAMING
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8 font-bold tracking-widest">LINE OFICIAL</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="https://instagram.com/brtgaming.ff" target="_blank" class="bg-ff-red hover:bg-white hover:text-ff-red text-white font-bold py-4 px-8 rounded-lg text-xl transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(0,153,255,0.5)]">
+                    <i class="fab fa-instagram mr-2"></i> SEGUIR NO INSTA
+                </a>
+            </div>
         </div>
-
-        <div class="card">
-            <h3>Suporte</h3>
-            <p>Apoio da liderança e ajuda constante para evolução.</p>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-ff-red text-2xl"></i>
         </div>
+    </section>
 
-        <div class="card">
-            <h3>Visibilidade</h3>
-            <p>Oportunidade de crescer como player e criador.</p>
+    <!-- SOBRE NÓS -->
+    <section id="sobre" class="py-20 bg-gradient-game">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="font-title text-5xl text-center mb-16 text-ff-red">SOBRE A LINE</h2>
+            <div class="bg-ff-gray/50 p-8 rounded-xl border border-ff-red/20 backdrop-blur-sm">
+                <p class="text-lg leading-relaxed text-gray-300 text-justify">
+                    A <strong class="text-ff-red">BRT GAMING</strong> é uma LINE profissional e organizada de Free Fire. 
+                    Com foco total em competitividade, amistosos e premiações, nosso objetivo é sempre chegar ao topo. 
+                    Somos um time unido, forte e preparado para dar Booyah! em todas as partidas.
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10 text-center">
+                    <div class="p-4">
+                        <h3 class="font-title text-4xl text-ff-neon">12</h3>
+                        <p class="text-gray-400">MEMBROS</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-title text-4xl text-ff-neon">02</h3>
+                        <p class="text-gray-400">TORNEIOS</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-title text-4xl text-ff-neon">TOP</h3>
+                        <p class="text-gray-400">RANKING</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-title text-4xl text-ff-neon">24H</h3>
+                        <p class="text-gray-400">ATIVIDADE</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="card">
-            <h3>Organização</h3>
-            <p>Regras claras, hierarquia e foco em resultados.</p>
+    <!-- TORNEIOS -->
+    <section id="torneios" class="py-20 bg-ff-dark">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="font-title text-5xl text-center mb-4 text-white">NOSSOS <span class="text-ff-red">TORNEIOS</span></h2>
+            <p class="text-center text-gray-400 mb-16">Competições que já participamos e onde estamos presentes</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Card LAFF COM LOGO -->
+                <div class="bg-ff-gray rounded-xl overflow-hidden border border-ff-red/30 hover:border-glow transition-all duration-500 p-8">
+                    <div class="flex items-center gap-6">
+                        <img src="https://cdn.discordapp.com/attachments/1363141435171537100/1498422061994086530/header.png?ex=69f119ca&is=69efc84a&hm=d464275b85ef6c49d9a59ecb664a083070d75d306a1ba34e051d4bcd95a16f9f&" alt="Logo LAFF" class="w-24 h-24 object-contain">
+                        <div>
+                            <h3 class="font-title text-4xl text-white">LAFF SÉRIE B</h3>
+                            <p class="text-ff-neon font-bold text-xl mt-2">Liga de Ascensão Free Fire</p>
+                            <p class="text-gray-400 mt-2">✅ Já participamos | 🚀 Voltamos a jogar novamente!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Itacal -->
+                <div class="bg-ff-gray rounded-xl overflow-hidden border border-ff-red/30 hover:border-glow transition-all duration-500 p-8">
+                    <div class="flex items-center gap-6">
+                        <i class="fas fa-medal text-6xl text-ff-red"></i>
+                        <div>
+                            <h3 class="font-title text-4xl text-white">ITACAL CUP</h3>
+                            <p class="text-ff-neon font-bold text-xl mt-2">Competição Regional</p>
+                            <p class="text-gray-400 mt-2">✅ Participação confirmada | Muita história feita!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- REQUISITOS -->
-<section>
-    <h2 class="title">Requisitos</h2>
-    <p class="subtitle">
-        ✔ Ser ativo<br>
-        ✔ Respeitar regras<br>
-        ✔ Ter comunicação<br>
-        ✔ Vontade de evoluir
-    </p>
-</section>
+    <!-- ELENCO -->
+    <section id="elenco" class="py-20 bg-gradient-game">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="font-title text-5xl text-center mb-4 text-white">NOSSO <span class="text-ff-red">ELENCO</span></h2>
+            <p class="text-center text-gray-400 mb-16">Line Oficial | 12 Membros</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card LÍDER -->
+                <div class="bg-ff-gray rounded-xl overflow-hidden border border-ff-red/30 hover:border-glow transition-all duration-500 group">
+                    <div class="h-48 bg-gradient-to-b from-ff-red/50 to-transparent relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-crown text-9xl text-white/10 group-hover:scale-110 transition-transform duration-500"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-title text-3xl text-white">LÍDER</h3>
+                        <p class="text-ff-neon font-bold mb-2">GGMECTREF</p>
+                        <p class="text-gray-400 text-sm">Fundador e comandante da Line BRT.</p>
+                    </div>
+                </div>
 
-<!-- FORM -->
-<section>
-    <h2 class="title" style="text-align:center;">Inscreva-se Agora</h2>
+                <div class="bg-ff-gray rounded-xl overflow-hidden border border-ff-red/30 hover:border-glow transition-all duration-500 group">
+                    <div class="h-48 bg-gradient-to-b from-blue-600/50 to-transparent relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-crosshairs text-9xl text-white/10 group-hover:scale-110 transition-transform duration-500"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-title text-3xl text-white">JOGADORES</h3>
+                        <p class="text-ff-neon font-bold mb-2">Elenco Principal</p>
+                        <p class="text-gray-400 text-sm">Os 12 craques que fazem acontecer dentro do jogo.</p>
+                    </div>
+                </div>
 
-    <div class="form">
-        <input id="nome" placeholder="Seu nome">
-        <input id="idff" placeholder="ID do Free Fire">
-        <input id="telefone" placeholder="Telefone / WhatsApp">
-        <button onclick="salvar()">ENVIAR INSCRIÇÃO</button>
-    </div>
-</section>
+                <div class="bg-ff-gray rounded-xl overflow-hidden border border-ff-red/30 hover:border-glow transition-all duration-500 group">
+                    <div class="h-48 bg-gradient-to-b from-purple-600/50 to-transparent relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-video text-9xl text-white/10 group-hover:scale-110 transition-transform duration-500"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-title text-3xl text-white">CONTEÚDO</h3>
+                        <p class="text-ff-neon font-bold mb-2">Edições e Designs</p>
+                        <p class="text-gray-400 text-sm">Responsáveis por toda a identidade visual.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script>
-function salvar() {
-    let nome = document.getElementById("nome").value;
-    let idff = document.getElementById("idff").value;
-    let telefone = document.getElementById("telefone").value;
+    <!-- CONTATO -->
+    <section id="contato" class="py-20 bg-ff-dark relative">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="font-title text-5xl mb-8 text-white">ENTRE EM <span class="text-ff-red">CONTATO</span></h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 text-left">
+                <div class="bg-ff-gray/50 p-6 rounded-xl border border-ff-neon/30">
+                    <h4 class="font-title text-2xl text-ff-neon mb-4">REDES SOCIAIS</h4>
+                    <a href="https://instagram.com/brtgaming.ff" target="_blank" class="flex items-center gap-4 text-xl hover:text-ff-red transition-colors">
+                        <i class="fab fa-instagram text-3xl"></i>
+                        <span>@brtgaming.ff</span>
+                    </a>
+                </div>
+                <div class="bg-ff-gray/50 p-6 rounded-xl border border-ff-neon/30">
+                    <h4 class="font-title text-2xl text-ff-neon mb-4">E-MAIL</h4>
+                    <p class="text-xl break-words">
+                        <i class="fas fa-envelope mr-2"></i>
+                        brtgaming.ff@gmail.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    if (!nome || !idff || !telefone) {
-        alert("Preencha todos os campos.");
-        return;
-    }
+    <!-- FOOTER -->
+    <footer class="bg-black py-8 border-t border-ff-red/30">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h3 class="font-title text-3xl text-ff-red mb-4">BRT GAMING</h3>
+            <p class="text-gray-500 mb-4">© 2025 Todos os direitos reservados | Line Oficial</p>
+            <div class="flex justify-center gap-6 text-2xl">
+                <a href="https://instagram.com/brtgaming.ff" target="_blank" class="hover:text-ff-red transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:brtgaming.ff@gmail.com" class="hover:text-ff-red transition-colors"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
 
-    let dados = JSON.parse(localStorage.getItem("recrutados")) || [];
-
-    dados.push({ nome, idff, telefone, data: new Date().toLocaleString() });
-
-    localStorage.setItem("recrutados", JSON.stringify(dados));
-
-    alert("Inscrição enviada com sucesso!");
-}
-</script>
-
-</body>
-</html>
+    <script>
